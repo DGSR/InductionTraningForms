@@ -1,0 +1,176 @@
+@media only screen and (max-width: 450px){
+    .jfCard{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media only screen and (max-width: 932px) and (min-width:451px) {
+    .jfCard{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+@media screen and (min-width: 933px) {
+    .jfCard {
+        margin: auto;
+    }
+}
+.checkboxRules{
+    padding-bottom: 2px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif !important;
+    font-size: 16px;
+    margin: 0;
+}
+.checkboxRules input:checked ~ label:before, .checkboxRules input:hover ~ label:before, .checkboxRules label:hover ~ label:before {
+    border: 1px solid #5badfe;
+}
+.form-line-error .checkboxRules label:before{
+    border: 1px solid #e34343;
+}
+.checkboxRules input:checked ~ label:after {
+    opacity: 1;
+}
+.checkboxRules input{
+    margin: 0;
+    padding: 0;
+    clip-path: inset(100%);
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    background-color: initial;
+
+}
+.checkboxRules label{
+    display: block;
+    min-height: 24px;
+    position: relative;
+    quotes: none;
+    list-style: none;
+    line-height: 1;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    border-spacing: 0;
+    padding: 2px 0 0 30px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    color: #757575;
+    text-align: left;
+}
+@media only screen and (max-width: 368px){
+    .checkboxRules label {
+        font-size: 13px;
+        padding-top: 0 !important;
+    }
+}
+.checkboxRules label:before{
+    content: '';
+    border: 1px solid #aaa;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: none;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0;
+    cursor: pointer;
+    position: absolute;
+    left: 0 !important;
+    top: 0 !important;
+}
+.checkboxRules label:after{
+    content: '';
+    top: 4px !important;
+    left: 4px !important;
+    width: 12px !important;
+    height: 12px !important;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: none;
+    background: transparent;
+    background-color: #5badfe;
+    border: 0;
+    cursor: pointer;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    opacity: 0;
+    display: inline-block;
+    position: absolute;
+
+}
+
+.textRules{
+    font-family: Roboto, sans-serif;
+    font-palette: dark;
+    font-size: 13px;
+    color: #565656;
+    padding: 18px !important;
+}
+
+.frameTextRules{
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.imageRules{
+    max-height: 90%;
+    padding: 27px 2.4em 12px;
+}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+.fileContainer {
+    background: #3d80c4;
+    border-radius: .5em;
+    float: left;
+    padding: .5em;
+    width: 100%;
+    color:#fff;
+    margin-top: 10px;
+}
+
+.mobileImg{
+    max-width:200px;
+    max-height:200px;
+}
+.jfRequiredStar-message{
+ max-width:none;
+}
+
+.clickable{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.clickable:hover{
+    color:#313336;
+}

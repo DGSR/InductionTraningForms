@@ -1,0 +1,23 @@
+before_script:
+  - docker info
+build_docker_container:
+  stage: build
+  script:
+        - git checkout master
+        - git pull
+        - export TAG_TO_BUILD=$(git describe --abbrev=0 --tags)
+        - test -z "${TAG_TO_BUILD}" && echo "The TAG_TO_BUILD is empty" && exit 1
+        - git reset --hard "${TAG_TO_BUILD}"
+        - docker build -t "induction-training-front:${TAG_TO_BUILD}" .
+        - docker tag induction-training-front:${TAG_TO_BUILD} repo.linxdatacenter.com/induction-training/induction-training-front:${TAG_TO_BUILD}
+        - docker push repo.linxdatacenter.com/induction-training/induction-training-front:${TAG_TO_BUILD}
+        - docker rmi induction-training-front:${TAG_TO_BUILD}
+  only:
+    - master
+clean:
+  stage: .post
+  script:
+    - echo "Time to clean up"
+  after_script:
+    - rm -rf "${CI_PROJECT_DIR}/*"
+    - exit /b 0
